@@ -18,39 +18,6 @@ body {
   gap: 50px;
 }
 
-svg {
-  width: 100%;
-  height: 25%;
-  margin-top: 20px;
-}
-
-svg text {
-  font-size: 12vw;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 8px;
-  stroke: #00acac;
-  text-stroke: 2px transparent;
-  fill: transparent;
-  margin-top: 30px;
-  animation: animated-stroke 5s;
-  text-anchor: middle;
-}
-
-@keyframes animated-stroke {
-  0% {
-    stroke: #0063e5;
-    stroke-dasharray: 0 10%;
-  }
-  50% {
-    stroke: #0063e5;
-  }
-  100% {
-    stroke: #00acac;
-    stroke-dasharray: 10% 0%;
-    stroke-dashoffset: 25%;
-  }
-}
 .card {
   width: 250px;
   height: 370px;
@@ -60,10 +27,6 @@ svg text {
 
 .card.blue {
   background: linear-gradient(135deg, #09AFFF, #125575);
-}
-
-.card.purple {
-  background: linear-gradient(135deg, #5911F2, #290987);
 }
 
 .card .product {
@@ -121,10 +84,6 @@ svg text {
   background: #039BE5;
 }
 
-.card.purple .title {
-  background: #5B1AE3;
-}
-
 .card:hover .product img {
   transform: translate3d(-50%, -40%, 80px);
 }
@@ -145,10 +104,4 @@ svg text {
 
 .card:hover .title h2 {
   transform: translateZ(20px);
-}
-
-@media (max-width: 1300px) {
-  svg {
-    height: 15%;
-  }
 }/*# sourceMappingURL=style.css.map */
