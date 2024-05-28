@@ -225,7 +225,7 @@ header{
     }
 
     .icons{
-        padding: 0 45%;
+        padding: 0 4%;
     }
 
     .scroll{
@@ -242,7 +242,7 @@ header{
 
 }
 
-@media(max-width:1370){
+@media(max-width:1370px){
     .icons{
         display: none;
     }
@@ -269,11 +269,11 @@ header{
 }
 
 @media(max-width:950px){
-    #menu-icon{
+    header .right-content #menu-icon{
         display: block;
     }
 
-    .navlist{
+    header .navlist{
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -287,23 +287,18 @@ header{
         backdrop-filter: blur(32px);
         transition: all .6s ease-in-out;
 
-
         a{
             display: block;
             padding: 0;
             margin: 0 0 25px 0 ;
             font-size: 1.7rem;
         }
+        .open{
+            left: 0;
+        }
     }
 
-    .navlist.open{
-        left: 0;
-    }
-
-
-
-}
-
+    
 
 @media(max-width:920px){
     
