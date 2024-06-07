@@ -5,15 +5,49 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-.box {
+body {
+  background: #2c2c2c;
+}
+
+.container {
+  position: relative;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container .bubbles {
+  position: relative;
+  display: flex;
+}
+.container .bubbles span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background-color: white;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.2666666667), 0 0 50px #705afe, 0 0 100px #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  z-index: -1;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s / var(--i));
+}
+.container .bubbles span:nth-child(even) {
+  background: #FFC107;
+  box-shadow: 0 0 0 10px #F0DB4F, 0 0 50px #ff2d75, 0 0 100px #F23B00;
+}
+.container .box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
   margin: 20px 0 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  flex-wrap: wrap;
 }
-.box .card {
+.container .box .card {
+  position: relative;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -24,25 +58,34 @@
   border-radius: 10px;
   transition: 0.6s;
 }
-.box .card img {
+.container .box .card img {
   width: 100%;
   margin: 50px 10px;
   transition: 0.6s;
 }
-.box .card:hover img {
+.container .box .card:hover img {
   transform: scale(1.5);
 }
-.box .card h2 {
+.container .box .card h2 {
   color: #222;
   opacity: 1;
   font-size: 20px;
   padding-bottom: 10px;
 }
-.box .card p {
+.container .box .card p {
   color: red;
   font-weight: bold;
   font-size: 18px;
 }
-.box .card:hover {
+.container .box .card:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
